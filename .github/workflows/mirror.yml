@@ -35,7 +35,7 @@ jobs:
             repo: binutils
             secret: ID_RSA_BINUTILS
             branches: master
-          - remote: https://github.com/tianocore/edk2
+          - remote: git://sourceware.org/git/gcc.git
             user: vathpela
             repo: gcc
             secret: ID_RSA_GCC
@@ -49,6 +49,11 @@ jobs:
             user: vathpela
             repo: gnu-efi
             secret: ID_RSA_GNU_EFI
+            branches: master
+          - remote: git://git.code.sf.net/p/gnu-efi/code
+            user: rhboot
+            repo: gnu-efi
+            secret: ID_RSA_GNU_EFI_RHBOOT
             branches: master
           - remote: https://github.com/rpm-software-management/rpm
             user: vathpela
@@ -89,6 +94,7 @@ jobs:
           ID_RSA_EFIVAR: ${{ secrets.ID_RSA_EFIVAR }}
           ID_RSA_GCC: ${{ secrets.ID_RSA_GCC }}
           ID_RSA_GNU_EFI: ${{ secrets.ID_RSA_GNU_EFI }}
+          ID_RSA_GNU_EFI_RHBOOT: ${{ secrets.ID_RSA_GNU_EFI_RHBOOT }}
           ID_RSA_GRUB2: ${{ secrets.ID_RSA_GRUB2 }}
           ID_RSA_GRUB2_FEDORA: ${{ secrets.ID_RSA_GRUB2_FEDORA }}
           ID_RSA_LINUX: ${{ secrets.ID_RSA_LINUX }}
