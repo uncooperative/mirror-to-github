@@ -64,7 +64,7 @@ jobs:
             user: vathpela
             repo: efivar
             secret: ID_RSA_EFIVAR
-            branches: master
+            branches: main
           - remote: git://git.savannah.gnu.org/grub.git
             user: rhboot
             repo: grub2
