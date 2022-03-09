@@ -80,6 +80,11 @@ jobs:
             repo: pesign
             secret: ID_RSA_PESIGN
             branches: main
+          - remote: https://github.com/microsoft/mu_basecore
+            user: vathpela
+            repo: mu_basecore
+            secret: ID_RSA_MU_BASECORE
+            branches: poc/efi_mem_attributes release/202111 release/202102
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -98,6 +103,7 @@ jobs:
           ID_RSA_GRUB2: ${{ secrets.ID_RSA_GRUB2 }}
           ID_RSA_GRUB2_FEDORA: ${{ secrets.ID_RSA_GRUB2_FEDORA }}
           ID_RSA_LINUX: ${{ secrets.ID_RSA_LINUX }}
+          ID_RSA_MU_BASECORE: ${{ secrets.ID_RSA_MU_BASECORE }}
           ID_RSA_PESIGN: ${{ secrets.ID_RSA_PESIGN }}
           ID_RSA_RPM: ${{ secrets.ID_RSA_RPM }}
           ID_RSA_SHIM: ${{ secrets.ID_RSA_SHIM }}
